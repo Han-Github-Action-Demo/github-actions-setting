@@ -7,3 +7,10 @@ jobs:
         steps:
         - name: github context
           run: echo '${{ toJSON(github) }}'
+    context-2:
+        runs-on: ubuntu-latest
+        steps:
+        - name: github context
+          run: | 
+            echo '${{ github.repository }}'
+            echo '${{ github.event_name }}'
