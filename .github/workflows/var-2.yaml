@@ -3,7 +3,7 @@ on: push
 
 jobs:
     get-var:
-        rusn-on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
-        - name: get var
+        - name: get-var
           run: echo ${{ vars.level }}
