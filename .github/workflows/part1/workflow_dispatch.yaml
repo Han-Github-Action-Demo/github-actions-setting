@@ -1,4 +1,4 @@
-name: workflow-dispatch
+name: workflow-dispatch-test
 on: 
     workflow_dispatch:
         inputs:
