@@ -4,6 +4,7 @@ on: push
 jobs:
     job1:
         runs-on: ubuntu-latest
+        if: always()
         steps:
         - name: exit 1
           run: exit 1
