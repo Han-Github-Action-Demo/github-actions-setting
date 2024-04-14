@@ -4,11 +4,11 @@ on: push
 jobs:
     job1:
         runs-on: ubuntu-latest
-        if: always()
         steps:
         - name: exit 1
           run: exit 1
         - name: echo hello
+          if: always()
           run: echo hello
     
     job2:
