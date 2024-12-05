@@ -1,4 +1,4 @@
-name: tag-filter
+name: tag-works
 on:
     push:
         tags:
