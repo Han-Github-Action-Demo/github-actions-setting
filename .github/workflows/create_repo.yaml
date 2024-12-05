@@ -26,3 +26,17 @@ jobs:
         - name: create-repo
           run: |
             gh repo create Han-Github-Action-Demo/${{ inputs.prefix }}-${{ inputs.name }} --public --add-readme
+        - name: Send custom JSON data to Slack workflow
+          id: slack
+          uses: slackapi/slack-github-action@v1.26.0
+          with:
+            payload: |
+               {
+                 "key": "value",
+                 "foo": "bar"
+               }
+        env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
+    
+    
